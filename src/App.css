@@ -1,0 +1,154 @@
+ @import url('https://fonts.googleapis.com/css2?family=Mada:wght@300;400;500;600;700&display=swap');
+* {
+  font-family: 'Mada', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: .5s;
+}
+
+#root {
+  height: 100vh;
+  color: #333;
+  background-color: #f3e4d7;
+}
+a{
+  text-decoration: none;
+  color: unset;
+}
+/* height of the container */
+.leaflet-container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  /* border-radius: 2rem; */
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.cluster-icon {
+  background-color: rgb(18, 119, 227);
+  height: 2em;
+  width: 2em;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  box-shadow: 0 0 0px 5px #fff;
+}
+
+
+/* Form */
+.selection-form-area{
+  direction: rtl;
+  position: absolute;
+  width: 300px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  right: 15px;
+  top: 10%;
+  z-index: 999;
+}
+.selection-form-area header h2{
+  text-align: center;
+}
+.selection-form-area form select{
+  margin: 10px 0 0;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd ;
+  border-radius: 4px;
+}
+.selection-form-area form #search{
+  cursor: pointer;
+  width: 100%;
+  padding: 8px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  background-color: rgb(18, 119, 227);
+  box-shadow: none;
+  border: none;
+  color: white;
+  margin: 10px 0;
+}
+.selection-form-area form #search:hover{
+  transform: scale(1.02);
+  background-color: rgb(8, 92, 182);
+}
+.results{
+  position: relative;
+  max-height: 362px;
+  overflow-y: scroll;
+}
+.results::-webkit-scrollbar {
+  display: none;
+}
+.results .pharmacy-card{
+  cursor: pointer;
+  margin: 5px 0;
+  background-color: #dddddd7f;
+  padding: 5px;
+  border-radius: 4px;
+}
+.results .pharmacy-card:hover{
+  background-color: #ddd;
+}
+.results .pharmacy-card h2{
+  font-size: 18px;
+}
+.results .pharmacy-card ul{
+  list-style: none;
+}
+.results .pharmacy-card ul{
+  font-size: 12px;
+  color: #7e7e7e;
+  font-weight: 400;
+}
+.results .pharmacy-card img{
+  width: 12px;
+  height: 12px;
+}
+.results .pharmacy-card .is-open{
+  font-size: 14px;
+  font-weight: 700;
+}
+.results .pharmacy-card ul li{
+  font-size: 14px;
+}
+.results .pharmacy-card .open{
+  color: rgb(6, 170, 41);
+}
+.results .pharmacy-card .close{
+  color: rgb(189, 18, 18);
+}
+.leaflet-routing-container{
+  border: none !important;
+}
+.leaflet-routing-alt{
+  background: white;
+  padding: 0 10px;
+  border-radius: 4px;
+  height: 320px;
+  overflow-y: scroll;
+  margin: 10px 0;
+}
+.leaflet-routing-alt h2, .leaflet-routing-alt h3{
+  text-align: right;
+}
+.leaflet-routing-alt::-webkit-scrollbar {
+  display: none;
+}
+.leaflet-left{
+  left: unset !important;
+  right: 0 !important;
+  margin-right: 10px;
+}
+.leaflet-right{
+  right: unset !important;
+  left: 0 !important;
+  margin-left: 10px;
+}
